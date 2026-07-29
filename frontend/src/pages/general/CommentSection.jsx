@@ -4,7 +4,7 @@ import { FaTimes, FaPaperPlane } from "react-icons/fa";
 
 import "../../styles/CommentSection.css";
 
-const CommentSection = ({ foodId, closeComments }) => {
+const CommentSection = ({ foodId, closeComments, refreshFoods }) => {
   const [comments, setComments] = useState([]);
   const [text, setText] = useState("");
   const [loading, setLoading] = useState(false);
@@ -51,7 +51,8 @@ const CommentSection = ({ foodId, closeComments }) => {
 
       setText("");
 
-      fetchComments();
+      await fetchComments();
+      await refreshFoods();
     } catch (error) {
       console.log(error);
     } finally {
