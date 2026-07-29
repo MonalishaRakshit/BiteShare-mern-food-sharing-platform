@@ -1,0 +1,61 @@
+:root {
+  /* Brand Colors */
+  --primary: #ff6b35;
+  --primary-hover: #e85d2d;
+  --primary-light: #fff4ef;
+
+  /* Background */
+  --background: #f6f8fb;
+  --surface: #ffffff;
+
+  /* Text */
+  --text: #1f2937;
+  --text-secondary: #6b7280;
+
+  /* Border */
+  --border: #e5e7eb;
+
+  /* Input */
+  --input-bg: #ffffff;
+  --placeholder: #9ca3af;
+
+  /* States */
+  --success: #22c55e;
+  --danger: #ef4444;
+
+  /* Radius */
+  --radius-sm: 10px;
+  --radius-md: 14px;
+  --radius-lg: 22px;
+
+  /* Shadow */
+  --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.08);
+
+  /* Transition */
+  --transition: 0.25s ease;
+
+  /* Font */
+  --font-family: "Inter", sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0f172a;
+    --surface: #1e293b;
+
+    --text: #f8fafc;
+    --text-secondary: #94a3b8;
+
+    --border: #334155;
+
+    --input-bg: #0f172a;
+
+    --placeholder: #64748b;
+
+    --primary-light: rgba(255, 107, 53, 0.12);
+
+    --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.3);
+    --shadow-md: 0 12px 35px rgba(0, 0, 0, 0.45);
+  }
+}

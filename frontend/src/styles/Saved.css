@@ -1,0 +1,264 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* =========================
+   Container
+========================= */
+
+.saved-container {
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+
+  background: #000;
+
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.saved-container::-webkit-scrollbar {
+  display: none;
+}
+
+/* =========================
+   Header
+========================= */
+
+.saved-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  height: 65px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(16px);
+
+  z-index: 100;
+}
+
+.saved-title {
+  color: white;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.back-btn {
+  position: absolute;
+  left: 20px;
+
+  color: white;
+  text-decoration: none;
+  font-size: 28px;
+
+  transition: 0.25s;
+}
+
+.back-btn:hover {
+  transform: translateX(-4px);
+}
+
+/* =========================
+   Reel
+========================= */
+
+.saved-reel {
+  position: relative;
+
+  width: 100%;
+  height: 100vh;
+
+  scroll-snap-align: start;
+
+  overflow: hidden;
+}
+
+.saved-reel video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.saved-reel::after {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.8),
+    rgba(0, 0, 0, 0.2),
+    transparent
+  );
+
+  pointer-events: none;
+}
+
+/* =========================
+   Overlay
+========================= */
+
+.saved-overlay {
+  position: absolute;
+
+  left: 18px;
+  right: 18px;
+  bottom: 40px;
+
+  z-index: 5;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 12px;
+}
+
+.saved-overlay h3 {
+  color: white;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.saved-overlay p {
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.6;
+}
+
+/* =========================
+   Visit Button
+========================= */
+
+.saved-visit-btn {
+  width: fit-content;
+
+  padding: 11px 24px;
+
+  background: #ff5a1f;
+  color: white;
+
+  text-decoration: none;
+
+  border-radius: 999px;
+
+  font-weight: 600;
+
+  transition: 0.3s;
+}
+
+.saved-visit-btn:hover {
+  background: #ff3d00;
+  transform: translateY(-2px);
+}
+
+/* =========================
+   Empty State
+========================= */
+
+.empty-saved {
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+
+  color: white;
+}
+
+.empty-saved h2 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.empty-saved p {
+  color: #bdbdbd;
+  font-size: 16px;
+}
+
+/* =========================
+   Responsive
+========================= */
+
+@media (max-width: 768px) {
+  .saved-overlay h3 {
+    font-size: 22px;
+  }
+
+  .saved-overlay p {
+    font-size: 14px;
+  }
+
+  .saved-title {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .saved-overlay {
+    bottom: 28px;
+  }
+
+  .saved-overlay h3 {
+    font-size: 20px;
+  }
+
+  .saved-overlay p {
+    font-size: 13px;
+  }
+
+  .saved-title {
+    font-size: 18px;
+  }
+}
+
+.actions {
+  position: absolute;
+  right: 18px;
+  bottom: 120px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  z-index: 10;
+}
+
+.actions button {
+  background: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.actions svg {
+  font-size: 30px;
+}
+
+.actions span {
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.liked-icon {
+  color: #ff3040;
+}
+
+.saved-icon {
+  color: #ffd43b;
+}
