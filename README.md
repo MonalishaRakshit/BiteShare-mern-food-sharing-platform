@@ -32,11 +32,42 @@ A full-stack MERN food sharing platform where users can discover, share, and int
 - Multer
 - ImageKit
 
+## 📸 Project Screenshots
+
+### 🔐 Registration Page | 🎥 Reels Feed
+<p align="center">
+  <img src="assets/screenshots/register_page.png" width="45%" alt="Registration Page"/>
+  <img src="assets/screenshots/reels-feed.png" width="45%" alt="Reels Feed"/>
+</p>
+
+*Left: User registration page. Right: Reels-style food feed with like, comment, save, and profile navigation.*
+
+---
+
+### 💬 Comment Section | 🔖 Saved Videos
+<p align="center">
+  <img src="assets/screenshots/comment_section.png" width="45%" alt="Comment Section"/>
+  <img src="assets/screenshots/saved_vid.png" width="45%" alt="Saved Videos"/>
+</p>
+
+*Left: Interactive comment section. Right: Saved videos page for bookmarked food content.*
+
+---
+
+### 🏪 Food Partner Profile
+<p align="center">
+  <img src="assets/screenshots/profile.png" width="45%" alt="Food Partner Profile"/>
+</p>
+
+*Food partner profile showcasing uploaded food videos.*
+
 ## 📂 Project Structure
 
-```
-mern-food-sharing-platform
+```text
+BiteShare-mern-food-sharing-platform
 │
+├── assets
+│   └── screenshots
 ├── backend
 ├── frontend
 └── README.md
